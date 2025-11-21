@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <form name="myform"  action="valid.html" onsubmit="return validateform()">
+        <label>name</label><input type="text" id="name" name="name" placeholder="name"><br/>
+        <label>password</label><input type="password" name="password" placeholder="password"><br/>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+          </form>
+     </body>
+
+        <script>
+                function validateform(){
+                    var name=document.myform.name.value;
+                    var password=document.myform.password.value;
+                    if(name==null || name==""){
+                        alert("name can't be blank");
+                        return false;
+                    }
+                    else if(password.length<6){
+                        alert("password must be at least 6 characters long.");
+                        return false;
+                    }
+                }
+                </script>
+
+
+
+
+  
+</html>
